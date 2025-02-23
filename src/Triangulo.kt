@@ -7,15 +7,16 @@ class Triangulo(color: String, val base: Int, val altura: Int, val lados: Array<
     }
 
     override fun perimetro(): Int {
+        var perimetroTotal = 0
+
         if (equilatero) {
             return 3 * base
         } else {
-            var perimetroTotal = 0
-            for (i in lados) {
-                perimetroTotal += i
+            for (lado in lados) {
+                perimetroTotal += lado
             }
         }
-        return 0
+        return perimetroTotal
     }
 
 }
